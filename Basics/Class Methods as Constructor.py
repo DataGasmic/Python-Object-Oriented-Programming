@@ -22,11 +22,11 @@ class Friends:
 	def raise_pmoney(cls,percent):
 		cls.inc_percent = percent   # Using cls as class is a keyword in Python
 
-	@classmethod
+	@classmethod   # Classmethod used a Constructor to create an instance of a class
 	def data_from_string(cls,str_data):
 		first,second_half = str_data.split('.',1)
 		last,domain = second_half.split('@')
-		return cls(first,last)
+		return cls(first,last)  # Instance being created every time a string is passed from the data_from_string method
 
 
 #fr1 = Friends('Pranjal','Biyani',1000000)
